@@ -1,0 +1,12 @@
+.git/
+node_modules/
+.expo/
+.npm-cache/
+.playwright-cli/
+dist/
+output/
+test-results/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo

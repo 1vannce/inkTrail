@@ -31,6 +31,19 @@ npm run ios
 
 The project uses the Expo managed workflow. Native `android/` and `ios/` project directories are not needed to run it. Catalog browsing works immediately with an internet connection. The local `.env` connects the delivered workspace to the demo tracker; a fresh copy without that file can connect through the Connection screen.
 
+## Deploy the web app to Vercel
+
+Import this GitHub repository into Vercel, keep the root directory at the repository root, and select **Other** as the framework preset. The included `vercel.json` sets `npm ci` as the install command, `npm run export:web` as the build command, and `dist` as the output directory. Its rewrite lets Expo Router handle direct links and page refreshes, including `/library`, `/connection`, and `/title/123`.
+
+Use Node.js 22.13 or later. To connect the deployed app to a tracker by default, add `EXPO_PUBLIC_TRACKER_API_URL` in the Vercel project's environment variables before deploying. This is a public HTTPS API base URL, without `/entries` or `/lists`. Without it, readers can configure their endpoint from the app's Connection screen. Changes to this environment variable require a new deployment because Expo embeds it during the build. The local `.env` is excluded from Git and CLI uploads.
+
+Alternatively, deploy from this directory with Vercel CLI:
+
+```powershell
+npx vercel login
+npx vercel --prod
+```
+
 ## Included demo tracker
 
 A dedicated anonymous Beeceptor endpoint was created on October 11, 2026, with both CRUD routes configured:
