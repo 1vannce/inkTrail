@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "InkTrail",
+    "slug": "inktrail",
+    "scheme": "inktrail",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F7F7F0",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.inktrail.reader"
+    },
+    "android": {
+      "package": "com.inktrail.reader"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "InkTrail — Your next chapter"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+dist/
+.npm-cache/
+.env
+.env.local
+test-results/
+*.tsbuildinfo
+
+
+.playwright-cli/
+output/playwright/
